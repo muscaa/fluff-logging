@@ -4,10 +4,13 @@ import fluff.logging.ILogger;
 import fluff.logging.LogLevel;
 import fluff.logging.format.ILogFormatPart;
 
+/**
+ * Represents the log format part that retrieves the name of the current thread.
+ */
 public class LogFormatPartThread implements ILogFormatPart {
-	
-	@Override
-	public String get(ILogger log, LogLevel level, String message) {
-		return Thread.currentThread().getName();
-	}
+    
+    @Override
+    public String get(ILogger log, LogLevel level, String message) {
+        return Thread.currentThread().getName();
+    }
 }

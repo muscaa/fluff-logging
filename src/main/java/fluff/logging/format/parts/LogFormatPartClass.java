@@ -5,15 +5,18 @@ import fluff.logging.LogConfig;
 import fluff.logging.LogLevel;
 import fluff.logging.format.ILogFormatPart;
 
+/**
+ * Represents a class log format part.
+ */
 public class LogFormatPartClass implements ILogFormatPart {
-	
-	@Override
-	public String get(ILogger log, LogLevel level, String message) {
-		StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
-		if (stackTrace.length > LogConfig.TRACE_BACK) {
+    
+    @Override
+    public String get(ILogger log, LogLevel level, String message) {
+        StackTraceElement[] stackTrace = Thread.currentThread().getStackTrace();
+        if (stackTrace.length > LogConfig.TRACE_BACK) {
             StackTraceElement currentElement = stackTrace[LogConfig.TRACE_BACK];
             return currentElement.getClassName();
         }
-		return "unknown";
-	}
+        return "unknown";
+    }
 }
