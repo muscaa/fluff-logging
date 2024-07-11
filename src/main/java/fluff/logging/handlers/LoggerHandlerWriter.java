@@ -5,11 +5,11 @@ import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.io.Writer;
 
+import fluff.core.utils.StringUtils;
 import fluff.logging.ILogger;
 import fluff.logging.ILoggerHandler;
 import fluff.logging.Log;
 import fluff.logging.LogLevel;
-import fluff.logging.utils.StringUtils;
 
 /**
  * A logger handler that writes log messages to a specified {@link Writer}.

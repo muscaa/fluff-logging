@@ -3,11 +3,11 @@ package fluff.logging.handlers;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 
+import fluff.core.utils.StringUtils;
 import fluff.logging.ILogger;
 import fluff.logging.ILoggerHandler;
 import fluff.logging.Log;
 import fluff.logging.LogLevel;
-import fluff.logging.utils.StringUtils;
 
 /**
  * A console logger handler that prints log messages to the standard output.
